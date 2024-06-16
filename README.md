@@ -1,24 +1,14 @@
-# product-controller
+# Maker Copilot
 
-## Project setup
-```
-npm install
-```
+## Description du projet
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Application SAAS qui aide les créateurs à gérer leurs ventes, leur stock et leurs bénéfices.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Technologies utilisées
 
-### Lints and fixes files
-```
-npm run lint
-```
+- **Frontend :** Vue.js 3
+- **Backend :** Laravel pour le backoffice
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Statut du projet
+
+L'application est actuellement en cours de développement et de test. Elle n'est pas encore disponible pour un déploiement général.
