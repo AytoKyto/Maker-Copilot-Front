@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex min-w-52 min-h-screen grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
+        class="flex w-48 h-screen grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
         <div class="flex h-16 shrink-0 items-center">
             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt="Your Company" />
@@ -10,11 +10,11 @@
                 <li>
                     <ul role="list" class="-mx-2 space-y-1">
                         <li v-for="item in navigation" :key="item.name">
-                            <a v-if="!item.children" :href="item.href"
+                            <RouterLink v-if="!item.children" :to="item.href"
                                 :class="[item.current ? 'bg-gray-50' : 'hover:bg-gray-50', 'group flex items-center gap-x-3 rounded-md p-2 text-12 font-semibold leading-6 text-gray-700']">
                                 <component :is="item.icon" class="h-4 w-4 shrink-0 text-gray-400" aria-hidden="true" />
                                 {{ item.name }}
-                            </a>
+                            </RouterLink>
                             <Disclosure as="div" v-else v-slot="{ open }">
                                 <DisclosureButton
                                     :class="[item.current ? 'bg-gray-50' : 'hover:bg-gray-50', 'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-12 font-semibold leading-6 text-gray-700']">
@@ -52,6 +52,7 @@
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronRightIcon } from '@heroicons/vue/20/solid'
 import {
@@ -60,27 +61,37 @@ import {
     FolderIcon,
     HomeIcon,
     UsersIcon,
+    CurrencyEuroIcon
 } from '@heroicons/vue/24/outline'
 
 const navigation = [
-    { name: 'Acceuil', href: '#', icon: HomeIcon, current: true },
+    { name: 'Accueil', href: '/dashboard', icon: HomeIcon, current: true },
 
     {
         name: 'Produits',
         icon: FolderIcon,
         current: false,
         children: [
-            { name: 'Tous les produits', href: '#' },
-            { name: 'Créer un produits', href: '#' },
+            { name: 'Tous les produits', href: '/products' },
+            { name: 'Créer un produits', href: '/create-product' },
         ],
     },
     {
         name: 'Ventes',
-        icon: UsersIcon,
+        icon: CurrencyEuroIcon,
         current: false,
         children: [
             { name: 'Tous les ventes', href: '#' },
             { name: 'Ajouter une vente', href: '#' },
+        ],
+    },
+    {
+        name: 'Clients',
+        icon: UsersIcon,
+        current: false,
+        children: [
+            { name: 'Tous les clients', href: '#' },
+            { name: 'Ajouter un client', href: '#' },
         ],
     },
     { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },

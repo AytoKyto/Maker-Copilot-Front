@@ -1,12 +1,12 @@
 <template>
-    <div class="w-screen min-h-screen flex justify-between items-center ">
-        <DefaultAppSideBar />
-        <main class="sm:px-6 lg:px-8">
+    <div class="w-screen min-h-screen flex justify-between bg-c_light_gray">
+        <DefaultAppSideBarNew />
+        <main class="overflow-scroll h-screen w-full ml-24">
             <slot></slot>
         </main>
     </div>
 </template>
 
 <script setup>
-import DefaultAppSideBar from '../Nav/DefaultAppSideBar.vue'
+import DefaultAppSideBarNew from '../Nav/DefaultAppSideBarNew.vue'
 </script>
