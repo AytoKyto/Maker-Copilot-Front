@@ -1,8 +1,8 @@
 <template>
-    <DefaultBox customClass="h-full w-1/2 h-[10.2rem] flex flex-col justify-between">
+    <DefaultBox customClass="h-full w-1/2 h-[182px] flex flex-col justify-between">
         <HeaderArrowNext :title="title" :subtitle="subtitle" to="/" :icon="ChartBarIcon" />
         <div class="flex items-baseline space-x-3">
-            <p class="text-36">{{ value }} {{ unity }}</p>
+            <p class="text-36 font-semibold">{{ value }} {{ unity }}</p>
             <div
                 :class="[changeType === 'increase' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800', 'inline-flex items-center rounded-full px-2.5 py-0.5 text-sm w-16 h-7 font-medium md:mt-2 lg:mt-0']">
                 <ArrowUpIcon v-if="changeType === 'increase'"

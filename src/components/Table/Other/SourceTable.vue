@@ -1,6 +1,9 @@
 <template>
     <ul role="list" class="divide-y divide-white/5">
-        <li v-for="deployment in deployments" :key="deployment.id" class="relative flex items-center space-x-4 py-4">
+        <li v-for="deployment in deployments" :key="deployment.id" class="relative flex items-center space-x-4 py-2">
+            <div
+                :class="[environments[deployment.environment], 'flex-none rounded-full h-7 w-7 flex justify-center items-center text-10 font-medium ring-1 ring-inset']">
+                {{ deployment.environment }}</div>
             <div class="min-w-0 flex-auto">
                 <div class="flex items-center gap-x-3">
                     <h2 class="min-w-0 text-13 font-semibold leading-6 text-slate-800">
@@ -17,9 +20,7 @@
                     <p class="whitespace-nowrap">{{ deployment.statusText }}</p>
                 </div>
             </div>
-            <div
-                :class="[environments[deployment.environment], 'flex-none rounded-full px-4 py-2 text-10 font-medium ring-1 ring-inset']">
-                {{ deployment.environment }}</div>
+
             <ChevronRightIcon class="h-5 w-5 flex-none text-slate-600" aria-hidden="true" />
         </li>
     </ul>
@@ -39,51 +40,41 @@ const deployments = [
     {
         id: 1,
         href: '#',
-        projectName: 'ios-app',
-        teamName: 'Planetaria',
-        status: 'offline',
+        teamName: 'Slow Supermacher',
         statusText: '200 €',
-        description: 'Deploys from GitHub',
+        description: '13 articles vendue',
         environment: '1',
     },
     {
         id: 2,
         href: '#',
-        projectName: 'mobile-api',
-        teamName: 'Planetaria',
-        status: 'online',
-        statusText: 'Deployed 3m ago',
-        description: 'Deploys from GitHub',
+        teamName: 'La mouette',
+        statusText: '100 €',
+        description: '6 articles vendue',
         environment: '2',
     },
     {
         id: 3,
         href: '#',
-        projectName: 'tailwindcss.com',
-        teamName: 'Tailwind Labs',
-        status: 'offline',
-        statusText: 'Deployed 3h ago',
-        description: 'Deploys from GitHub',
+        teamName: 'Site web',
+        statusText: '95 €',
+        description: '3 articles vendue',
         environment: '3',
     },
     {
         id: 4,
         href: '#',
-        projectName: 'api.protocol.chat',
-        teamName: 'Protocol',
-        status: 'error',
-        statusText: 'Failed to deploy 6d ago',
-        description: 'Deploys from GitHub',
+        teamName: 'Boutique 2',
+        statusText: '20 €',
+        description: '1 articles vendue',
         environment: '4',
     },
     {
         id: 4,
         href: '#',
-        projectName: 'api.protocol.chat',
-        teamName: 'Protocol',
-        status: 'error',
-        statusText: 'Failed to deploy 6d ago',
-        description: 'Deploys from GitHub',
+        teamName: 'Boutique 3',
+        statusText: '10 €',
+        description: '1 articles vendue',
         environment: '5',
     },
 ]

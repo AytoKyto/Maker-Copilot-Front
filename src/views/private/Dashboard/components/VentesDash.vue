@@ -1,7 +1,7 @@
 <template>
     <DefaultBox customClass="h-full w-1/3">
         <div class="h-full flex flex-col justify-between space-x-2 mb-3">
-            <HeaderArrowNext title="Vos dernières ventes" subtitle="5 dernières ventes de juin" to="/"
+            <HeaderArrowNext title="Vos dernières ventes" subtitle="4 dernières ventes de juin" to="/"
                 :icon="PresentationChartLineIcon" />
             <div class="flex space-x-3 items-end">
                 <div class="w-full">
@@ -54,14 +54,6 @@ const ventes = [
     },
     {
         id: 4,
-        name: 'Slow-01-07-24',
-        description: '5 produits vendue',
-        client: 'Slow',
-        ca: '100 €',
-        benefice: '32 €',
-    },
-    {
-        id: 5,
         name: 'Slow-01-07-24',
         description: '5 produits vendue',
         client: 'Slow',

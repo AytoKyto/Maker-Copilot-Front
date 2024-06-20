@@ -8,6 +8,10 @@
           <HeaderArrowNext title="Vos 5 meilleurs canaux" subtitle="en juin" to="/" :icon="UsersIcon" />
           <SourceTable />
         </DefaultBox>
+        <DefaultBox customClass="h-max w-1/3 h-[10.2rem] flex flex-col justify-between">
+          <HeaderArrowNext title="Vos 5 meilleurs canaux" subtitle="en juin" to="/" :icon="UsersIcon" />
+          <SourceTable />
+        </DefaultBox>
       </div>
     </div>
   </DefaultAppLayout>

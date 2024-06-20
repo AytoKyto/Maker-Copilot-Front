@@ -22,11 +22,11 @@ const chartData = {
   datasets: [
       {
           label: "My First Dataset",
-          data: [60, 40],
+          data: [60, 40, 30],
           backgroundColor: [
-              "rgba(255, 99, 132, 0.8)",
-              "rgba(255, 159, 64, 0.8)",
-              "rgba(255, 205, 86, 0.8)",
+              "#E1FF72",
+              "#E1BEF6",
+              "#E3F5FF",
               "rgba(75, 192, 192, 0.8)",
               "rgba(54, 162, 235, 0.8)",
               "rgba(153, 102, 255, 0.8)",

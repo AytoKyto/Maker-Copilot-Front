@@ -25,7 +25,7 @@ import {
 const navigation = [
     { name: 'Accueil', href: '/dashboard', icon: HomeIcon, current: true },
     { name: 'Produits', href: '/products', icon: FolderIcon, current: false },
-    { name: 'Ventes', href: '/ventes', icon: CurrencyEuroIcon, current: false },
+    { name: 'Ventes', href: '/sales', icon: CurrencyEuroIcon, current: false },
     { name: 'Dépenses', href: '/depense', icon: CurrencyEuroIcon, current: false },
     { name: 'Clients', href: '/clients', icon: UsersIcon, current: false },
     { name: 'Rapports', href: '#', icon: ChartPieIcon, current: false },

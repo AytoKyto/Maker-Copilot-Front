@@ -1,17 +1,17 @@
 <template>
     <div class="flex space-x-2 mt-5">
-        <DefaultBox customClass="h-[14.5rem] w-1/2">
+        <DefaultBox customClass="h-[250px] w-1/2">
             <div class="h-full flex flex-col justify-between space-x-2 mb-3">
-                <HeaderArrowNext title="Évolution de vos revenus" subtitle="sur les 3 derniers mois" :to="'/'"
+                <HeaderArrowNext title="Évolution de vos revenus" subtitle="sur les 5 derniers mois" :to="'/'"
                     :icon="PresentationChartLineIcon" />
                 <div class="flex space-x-3 items-end h-full">
                     <p class="text-14 w-1/3 text-slate-500"><span
                             class="text-36 font-semibold text-slate-900">20%</span>
-                        d'évolution de vos bénéfices par
+                        d'évolution de votre chiffre d'affaire par
                         rapport
                         au mois précédent</p>
                     <div class="w-2/3 h-full">
-                        <CustombarChart />
+                        <LineStyledChart />
                     </div>
                 </div>
             </div>
@@ -27,11 +27,10 @@
                     </div>
                 </div>
             </div>
-            <div class="h-full flex space-x-2">
+            <div class="h-full flex space-x-3">
                 <NumberCard title="Chiffre d'affaire" subtitle="Juin" value=1000 unity="€" changeType="increase"
                     change="20" />
-                <NumberCard title="Bénéfice" subtitle="Juin" value=500 unity="€" changeType="increase"
-                    change="20" />
+                <NumberCard title="Bénéfice" subtitle="Juin" value=500 unity="€" changeType="increase" change="20" />
             </div>
         </div>
     </div>
@@ -39,7 +38,7 @@
 
 <script setup>
 import { EllipsisHorizontalIcon, PresentationChartLineIcon } from '@heroicons/vue/20/solid'
-import CustombarChart from '../../../../components/Chart/CustombarChart.vue'
+import LineStyledChart from '../../../../components/Chart/LineStyledChart.vue'
 import DefaultBox from '../../../../components/Layout/DefaultBox.vue'
 import NumberCard from '../../../../components/Ui/NumberCard.vue'
 import DatePicker from '../../../../components/Button/DatePicker.vue'

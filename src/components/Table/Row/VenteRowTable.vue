@@ -1,6 +1,6 @@
 <template>
     <tr class="border-b border-gray-200">
-        <td class="py-5 pl-4 pr-3 sm:pl-0">
+        <td class="py-3 pl-4 pr-3 sm:pl-0">
             <div class="font-medium text-13 text-gray-900">{{ name }}</div>
             <div class="mt-1 truncate text-11 text-gray-500">{{ description }}</div>
         </td>

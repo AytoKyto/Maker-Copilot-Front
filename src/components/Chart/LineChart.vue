@@ -7,7 +7,7 @@ import {
     Chart as ChartJS,
     Title,
     Tooltip,
-    // Legend,
+    Legend,
     LineElement,
     CategoryScale,
     LinearScale,
@@ -22,7 +22,7 @@ ChartJS.register(
     PointElement,
     Title,
     Tooltip,
-    // Legend
+    Legend
 );
 
 const chartData = {
