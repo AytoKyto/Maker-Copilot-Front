@@ -61,6 +61,9 @@ module.exports = {
       blue: colors.blue,
       indigo: colors.indigo,
       slate: colors.slate,
+      amber: colors.amber,
+      orange: colors.orange,
+      zinc: colors.zinc,
 
       // custom colors
       c_light_bleu: "#E3F5FF",

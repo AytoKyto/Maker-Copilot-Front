@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex flex-1 flex-col space-y-3 fixed left-5 top-[40%] bg-c_gray rounded-full z-50 p-2">
+    <nav class="flex flex-1 flex-col space-y-3 fixed left-5 top-[35%] bg-c_gray rounded-full z-50 p-2">
         <div v-for="(item, index) in navigation" :key="item.name" @mouseover="upHere[index] = true"
             @mouseleave="upHere[index] = false">
             <RouterLink :to="item.href"

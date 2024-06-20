@@ -22,7 +22,7 @@
                 <div class="flex space-x-5 items-center">
                     <DatePicker />
                     <div class="rounded-full p-4 bg-c_smoke_white hover:bg-c_gray cursor-pointer">
-                        <EllipsisHorizontalIcon class="h-5 w-5 flex-shrink-0 self-center text-slate-900"
+                        <EllipsisHorizontalIcon class="h-4 w-4 flex-shrink-0 self-center text-slate-900"
                             aria-hidden="true" />
                     </div>
                 </div>

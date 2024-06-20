@@ -1,10 +1,14 @@
 <template>
     <DefaultAppLayout>
         <div class="p-5">
-            <h2 class="text-22 font-bold tracking-tight text-gray-900">Tous vos produits</h2>
+            <div class="flex justify-between items-center">
+                <h2 class="text-22 font-bold tracking-tight text-gray-900">Tous vos produits</h2>
+                <DefaultLinkBtn to="/create-product" title="Créer un produit" />
+            </div>
 
             <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-                <div v-for="product in products" :key="product.id" class="group relative bg-c_light_gray p-2 rounded-md">
+                <div v-for="product in products" :key="product.id"
+                    class="group relative bg-c_smoke_white p-2 rounded-md">
                     <div
                         class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-52">
                         <img :src="product.imageSrc" :alt="product.imageAlt"
@@ -30,6 +34,7 @@
 
 <script setup>
 import DefaultAppLayout from '../../../components/Layout/DefaultAppLayout.vue'
+import DefaultLinkBtn from '../../../components/Button/DefaultLinkBtn.vue'
 
 const products = [
     {

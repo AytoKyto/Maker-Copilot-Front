@@ -1,5 +1,5 @@
 <template>
-    <DefaultBox customClass="h-full w-1/2">
+    <DefaultBox customClass="h-full w-1/3">
         <div class="h-full flex flex-col justify-between space-x-2 mb-3">
             <HeaderArrowNext title="Vos dernières ventes" subtitle="5 dernières ventes de juin" to="/"
                 :icon="PresentationChartLineIcon" />

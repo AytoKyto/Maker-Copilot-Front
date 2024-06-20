@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-between">
         <div class="flex justify-start items-start space-x-2">
-            <div class="rounded-full p-5 bg-slate-900">
+            <div class="rounded-full p-4 bg-slate-900">
                 <component :is="icon" class="h-4 w-4 flex-shrink-0 self-center text-slate-50" aria-hidden="true" />
             </div>
             <div class="flex flex-col">

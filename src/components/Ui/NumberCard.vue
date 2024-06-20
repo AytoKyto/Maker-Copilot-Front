@@ -1,5 +1,5 @@
 <template>
-    <DefaultBox customClass="h-full w-1/2 h-[10rem] flex flex-col justify-between">
+    <DefaultBox customClass="h-full w-1/2 h-[10.2rem] flex flex-col justify-between">
         <HeaderArrowNext :title="title" :subtitle="subtitle" to="/" :icon="ChartBarIcon" />
         <div class="flex items-baseline space-x-3">
             <p class="text-36">{{ value }} {{ unity }}</p>
