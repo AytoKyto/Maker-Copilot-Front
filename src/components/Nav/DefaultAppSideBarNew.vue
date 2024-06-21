@@ -19,16 +19,17 @@ import {
     FolderIcon,
     HomeIcon,
     UsersIcon,
-    CurrencyEuroIcon
+    CurrencyEuroIcon,
+    MinusCircleIcon
 } from '@heroicons/vue/24/outline';
 
 const navigation = [
-    { name: 'Accueil', href: '/dashboard', icon: HomeIcon, current: true },
-    { name: 'Produits', href: '/products', icon: FolderIcon, current: false },
-    { name: 'Ventes', href: '/sales', icon: CurrencyEuroIcon, current: false },
-    { name: 'Dépenses', href: '/depense', icon: CurrencyEuroIcon, current: false },
-    { name: 'Clients', href: '/clients', icon: UsersIcon, current: false },
-    { name: 'Rapports', href: '#', icon: ChartPieIcon, current: false },
+    { name: 'Accueil', href: '/dashboard', icon: HomeIcon, current: window.location.pathname === '/dashboard' ? true : false },
+    { name: 'Produits', href: '/products', icon: FolderIcon, current: window.location.pathname === '/products' ? true : false },
+    { name: 'Ventes', href: '/sales', icon: CurrencyEuroIcon, current: window.location.pathname === '/sales' ? true : false },
+    { name: 'Dépenses', href: '/depense', icon: MinusCircleIcon, current: window.location.pathname === '/depense' ? true : false },
+    { name: 'Clients', href: '/clients', icon: UsersIcon, current: window.location.pathname === '/clients' ? true : false },
+    { name: 'Rapports', href: '/#', icon: ChartPieIcon, current: window.location.pathname === '/#' ? true : false },
 ];
 
 const upHere = ref(navigation.map(() => false));

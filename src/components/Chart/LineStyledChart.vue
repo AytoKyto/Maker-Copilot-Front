@@ -72,13 +72,13 @@ const chartOptions = {
     },
     scales: {
         x: {
-            display: false,
+            display: true,
             grid: {
                 display: false
             }
         },
         y: {
-            display: false,
+            display: true,
             grid: {
                 display: false
             }
