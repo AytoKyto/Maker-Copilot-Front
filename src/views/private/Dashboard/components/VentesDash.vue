@@ -1,7 +1,7 @@
 <template>
     <DefaultBox customClass="w-1/3 h-[400px]">
         <div class="h-full flex flex-col justify-between space-x-2 mb-3">
-            <HeaderArrowNext title="Vos dernières ventes" subtitle="4 dernières ventes de juin" to="/"
+            <HeaderArrowNext title="Vos dernières ventes" subtitle="4 dernières ventes de juin" to="/sales"
                 :icon="PresentationChartLineIcon" />
             <div class="flex space-x-3 items-end">
                 <div class="w-full">

@@ -67,7 +67,7 @@
                 </div>
             </div>
         </DefaultBox>
-        <div class="h-full w-1/3">
+        <div class="w-1/3">
             <NumberCard title="Votre bénéfice moyen" subtitle="depuis Janvier 2024" value=68.4 unity="%" subvalue="650 €" subtitlevalue="en juin"
                 changeType="increase" change="20" />
         </div>
@@ -76,7 +76,7 @@
 
 <script setup>
 import { PresentationChartLineIcon } from '@heroicons/vue/20/solid'
-import DefaultBox from '../../../../components/Layout/DefaultBox.vue'
-import NumberCard from '../../../../components/Ui/NumberCard.vue'
-import HeaderArrowNext from '../../../../components/Header/HeaderArrowNext.vue'
+import DefaultBox from '@/components/Layout/DefaultBox.vue'
+import NumberCard from '@/components/Ui/NumberCard.vue'
+import HeaderArrowNext from '@/components/Header/HeaderArrowNext.vue'
 </script>

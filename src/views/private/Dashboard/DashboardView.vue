@@ -17,7 +17,7 @@
         <div class="h-full flex flex-col justify-between space-x-2 mb-3">
           <HeaderArrowNext title="Évolution de vos revenus" subtitle="sur les 5 derniers mois" :to="'/'"
             :icon="PresentationChartLineIcon" />
-          <div class="h-[200px] mt-3">
+          <div class="h-[350px] mt-3">
             <LineStyledChart />
           </div>
         </div>

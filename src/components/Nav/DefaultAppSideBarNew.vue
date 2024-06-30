@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex flex-1 flex-col space-y-3 fixed left-5 top-[35%] bg-c_gray rounded-full z-50 p-2">
+    <nav class="flex flex-1 flex-col space-y-3 fixed left-5 top-[32%] bg-c_gray rounded-full z-50 p-2">
         <div v-for="(item, index) in navigation" :key="item.name" @mouseover="upHere[index] = true"
             @mouseleave="upHere[index] = false">
             <RouterLink :to="item.href"
@@ -20,7 +20,8 @@ import {
     HomeIcon,
     UsersIcon,
     CurrencyEuroIcon,
-    MinusCircleIcon
+    MinusCircleIcon,
+    Cog8ToothIcon
 } from '@heroicons/vue/24/outline';
 
 const navigation = [
@@ -30,6 +31,7 @@ const navigation = [
     { name: 'Dépenses', href: '/depense', icon: MinusCircleIcon, current: window.location.pathname === '/depense' ? true : false },
     { name: 'Clients', href: '/clients', icon: UsersIcon, current: window.location.pathname === '/clients' ? true : false },
     { name: 'Rapports', href: '/#', icon: ChartPieIcon, current: window.location.pathname === '/#' ? true : false },
+    { name: 'Paramètre', href: '/#', icon: Cog8ToothIcon, current: window.location.pathname === '/#' ? true : false },
 ];
 
 const upHere = ref(navigation.map(() => false));

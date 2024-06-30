@@ -1,10 +1,11 @@
 <template>
-    <Combobox as="div" v-model="selectedPerson" @update:modelValue="query = ''">
-        <ComboboxLabel class="block text-sm font-medium leading-6 text-gray-900">Assigned to</ComboboxLabel>
+    <Combobox as="div" v-model="selectedPerson" @update:modelValue="clearQuery">
+        <ComboboxLabel class="block text-sm font-medium leading-6 text-gray-900">{{ label }}</ComboboxLabel>
         <div class="relative mt-2">
             <ComboboxInput
                 class="w-full rounded-md border-0 bg-white py-1.5 pl-3 pr-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                @change="query = $event.target.value" @blur="query = ''" :display-value="(person) => person?.name" />
+                @input="handleInput($event.target.value)" @blur="clearQuery"
+                :display-value="(person) => person?.name" />
             <ComboboxButton class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
                 <ChevronUpDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
             </ComboboxButton>
@@ -15,10 +16,9 @@
                     v-slot="{ active, selected }">
                     <li
                         :class="['relative cursor-default select-none py-2 pl-3 pr-9', active ? 'bg-indigo-600 text-white' : 'text-gray-900']">
-                        <span :class="['block truncate', selected && 'font-semibold']">
+                        <span :class="['block truncate', selected ? 'font-semibold' : '']">
                             {{ person.name }}
                         </span>
-
                         <span v-if="selected"
                             :class="['absolute inset-y-0 right-0 flex items-center pr-4', active ? 'text-white' : 'text-indigo-600']">
                             <CheckIcon class="h-5 w-5" aria-hidden="true" />
@@ -41,20 +41,26 @@ import {
     ComboboxOption,
     ComboboxOptions,
 } from '@headlessui/vue'
+import { defineProps } from 'vue'
 
-const people = [
-    { id: 1, name: 'Tissus' },
-    { id: 2, name: 'Autre' },
-    // More users...
-]
+const props = defineProps({
+    label: String,
+    data: Array,
+});
 
 const query = ref('')
 const selectedPerson = ref(null)
 const filteredPeople = computed(() =>
     query.value === ''
-        ? people
-        : people.filter((person) => {
-            return person.name.toLowerCase().includes(query.value.toLowerCase())
-        }),
-)
+        ? props.data
+        : props.data.filter((person) => person.name.toLowerCase().includes(query.value.toLowerCase()))
+);
+
+function handleInput(value) {
+    query.value = value;
+}
+
+function clearQuery() {
+    query.value = '';
+}
 </script>
